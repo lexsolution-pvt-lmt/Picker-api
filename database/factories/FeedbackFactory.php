@@ -22,7 +22,7 @@ class FeedbackFactory extends Factory
     public function definition()
     {
         return [
-            'feedbacks' => $this->faker->paragraph,
+            'message' => $this->faker->paragraph,
             'auction_id' => $this->faker->numberBetween(1, 10),
             'feedback_type_id' => $this->faker->numberBetween(1, 2),
             'left_by_user_id' => $this->faker->numberBetween(1, 10),

@@ -16,7 +16,7 @@ class FeedbackResourse extends JsonResource
     {
         return [
             'id' => $this->id,
-            'feedback' => $this->feedback,
+            'feedbacks' => $this->feedback,
         ];
     }
 }

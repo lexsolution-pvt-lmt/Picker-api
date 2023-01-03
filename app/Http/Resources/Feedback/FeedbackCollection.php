@@ -15,7 +15,7 @@ class FeedbackCollection extends ResourceCollection
     public function toArray($request)
     {
         return [
-            'feedback' => $this->collection,
+            'feedbacks' => $this->collection,
         ];
     }
 }

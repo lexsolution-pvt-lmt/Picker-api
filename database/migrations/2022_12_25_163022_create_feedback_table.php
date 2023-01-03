@@ -14,9 +14,9 @@ class CreateFeedbackTable extends Migration
     public function up()
     {
         
-        Schema::create('feedback', function (Blueprint $table) {
+        Schema::create('feedbacks', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('feedbacks');
+            $table->text('message');
 
             $table->unsignedInteger('auction_id')->unique();
             $table->unsignedInteger('feedback_type_id');
