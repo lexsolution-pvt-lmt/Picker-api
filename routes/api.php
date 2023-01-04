@@ -40,8 +40,11 @@ Route::get('verify-email/{id}/{hash}', [EmailVerificationController::class, 'ver
 Route::post('forgot-password', [NewPasswordController::class, 'forgotPassword']);
 Route::post('reset-password', [NewPasswordController::class, 'reset']);
 
+//Auction Routes
 Route::apiResource('/auctions', AuctionController::class);
 
+//Bid Routes
 Route::apiResource('/bids', BidController::class);
 
+//Feedback Routes
 Route::apiResource('/feedback', FeedbackController::class);
