@@ -16,30 +16,23 @@ class BidController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    private $auction;
-
-    private $bids;
-
-    public function __construct(Auction $auctions, Bid $bids)
-    {
-        $this->auctions = $auctions;
-        $this->bids = $bids;
-    }
-
+    
+    // get all bid by auction id
     public function index($id)
     {
-        $auctionid = $id;
-      
-        
-        //get bids
-        $bids = $this->bids->getBidsForAuction($auctionId);
+        $auctionId = $id;
 
-        //return bids
-        return response()->json([
-            'message' => 'Bids retrieved successfully',
-            'bids' => $bids
-        ], 200);
-        
+        //validate auction id
+        if (!$this->auctions->isValidAuction($auctionId)) {
+            return response()->json([
+                'message' => 'Auction not found',
+                'auction' => $auctionId
+            ], 404);
+        };
+
+        $bids = $this->bids->getBidsByAuction($auctionId);
+
+        return BidCollection::collection($bids);
     }
 
     /**
