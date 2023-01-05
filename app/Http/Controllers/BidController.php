@@ -49,7 +49,7 @@ class BidController extends Controller
      */
     public function show(Bid $bid)
     {
-        return new BidResource($bid);
+       //
     }
 
     /**
@@ -61,12 +61,13 @@ class BidController extends Controller
      */
     public function update(Request $request, Bid $bid)
     {
-        if ($bid->update($request->all())) {
+       /* if ($bid->update($request->all())) {
             return response()->json([
                 'message' => 'Bid updated successfully',
                 'bid' => $bid
             ], 200);
         }
+        */
     }
 
     /**
