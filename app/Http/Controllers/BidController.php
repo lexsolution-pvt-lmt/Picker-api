@@ -28,16 +28,9 @@ class BidController extends Controller
 
     public function index($id)
     {
-        $auctionId = $id;
+        $auctionid = $id;
+      
         
-        //validate auction id
-        if (!$this->auctions->isValidAuction($auctionId)) {
-            return response()->json([
-                'message' => 'Auction not found',
-                'auction' => $auctionId
-            ], 404);
-        }
-
         //get bids
         $bids = $this->bids->getBidsForAuction($auctionId);
 

@@ -13,7 +13,18 @@ class AuctionController extends Controller
     
     public function index()
     {
-        return new AuctionCollection(Auction::paginate(10));
+        
+        if ($auctions->status == 'Unsold') {
+            return new AuctionCollection(Auction::paginate(10));
+        
+        }
+        else {
+            return response()->json([
+                'message' => 'Auction not found'
+            ], 404);
+        }
+
+
     }
 
    

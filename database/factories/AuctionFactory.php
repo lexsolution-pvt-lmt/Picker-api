@@ -30,7 +30,7 @@ class AuctionFactory extends Factory
             'buy_now_price' => $this->faker->randomFloat(2, 0, 1000),
             'end_date' => $this->faker->date,
             'end_time' => $this->faker->time,
-            'status' => $this->faker->randomElement(['active', 'inactive']),
+            'status' => $this->faker->randomElement(['Sold', 'Unsold']),
             'user_id' => $this->faker->numberBetween(1, 10),
         ];
     }
