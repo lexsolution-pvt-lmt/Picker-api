@@ -12,19 +12,8 @@ class AuctionController extends Controller
 {
     
     public function index()
-    {
-        
-        if ($auctions->status == 'Unsold') {
-            return new AuctionCollection(Auction::paginate(10));
-        
-        }
-        else {
-            return response()->json([
-                'message' => 'Auction not found'
-            ], 404);
-        }
-
-
+    {     
+        return new AuctionCollection(Auction::paginate(10));
     }
 
    
@@ -53,16 +42,12 @@ class AuctionController extends Controller
    
     public function show(Auction $auction)
     {
-        //
+        return new AuctionResource($auction);
+
+
     }
 
-    public function getByCategory(Request $request, $category_name)
-    {
-        $auctions = Auction::whereHas('category', function ($query) use ($category_name) {
-            $query->where ('name', $category_name);
-        })->get();
-    }
-
+   
     
     public function update(Request $request, Auction $auction)
     {

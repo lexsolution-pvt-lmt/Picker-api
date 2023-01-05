@@ -18,7 +18,7 @@ class ForgotPasswordTest extends TestCase
         $this->withoutExceptionHandling();
 
         $response = $this->post('/api/forgot-password', [
-            'email' => 'ravindu123@test.com'
+            'email' => 'ravindu12345@test.com'
         ]);
 
         $response->assertStatus(200);

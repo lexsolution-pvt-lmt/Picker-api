@@ -25,9 +25,6 @@ class CreateCategoriesTable extends Migration
                 $table->integer('auction_id')->unsigned();
                 $table->integer('category_id')->unsigned();
 
-                $table->foreign('auction_id')->references('id')->on('auctions');
-                $table->foreign('category_id')->references('id')->on('categories');
-
                 $table->timestamps();
                 
             });

@@ -18,7 +18,7 @@ class LoginTest extends TestCase
         $this->withoutExceptionHandling();
 
         $response = $this->post('/api/login', [
-            'email' => 'ravindu123@test.com',
+            'email' => 'ravindu12345@test.com',
             'password' => 'Ravindu123'
         ]);
 

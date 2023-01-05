@@ -14,7 +14,7 @@ class CreateAuctionsTable extends Migration
     public function up()
     {
         Schema::create('auctions', function (Blueprint $table) {
-            $table->id();
+            $table->Increments('id');
             $table->string('title');
             $table->text('description');
             $table->string('image');
