@@ -35,7 +35,14 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $categories = new Categories();
+        $categories->name = $request->name;
+        $categories->save();
+
+        return response()->json([
+            'message' => 'Category added successfully',
+            'categories' => $categories
+        ], 201);
     }
 
     /**
