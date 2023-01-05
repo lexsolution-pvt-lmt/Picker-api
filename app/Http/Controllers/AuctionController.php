@@ -14,6 +14,9 @@ class AuctionController extends Controller
     public function index()
     {     
         return new AuctionCollection(Auction::paginate(10));
+
+        
+       
     }
 
    
@@ -43,42 +46,18 @@ class AuctionController extends Controller
     public function show(Auction $auction)
     {
         return new AuctionResource($auction);
-
-
     }
 
    
     
     public function update(Request $request, Auction $auction)
-    {
-        
-        if ($auction->id == $request->id) {
-            return response()->json([
-                'message' => 'Auction updated successfully',
-                'auction' => $auction
-            ], 200);
-        } else {
-            return response()->json([
-                'message' => 'Auction not found'
-            ], 404);
-        }
-        return response([
-            'massage' => 'Auction updated successfully',
-            'data' => new AuctionResource($auction)
-        ], 200);
-        
-            
+    {  
+      //     
     }
 
-    //Remove the specified resource from storage.
      
     public function destroy(Auction $auction)
     {
-        $auction->delete();
-        
-        return response([
-            'message' => 'Auction deleted successfully'
-        ], 204);
-        
+        //
     }
 }

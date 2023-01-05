@@ -16,12 +16,12 @@ class CreatePaymentsTable extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('user_id');
+            $table->integer('auction_id');
+            $table->integer('bid_id');
             $table->enum('payment_option', ['paypal', 'credit_card', 'bank_transfer', 'cash on delivery'])
             ->default('credit_card');
             $table->string('payment_email');
             $table->longText('payment_details');
-            $table->string('account_name');
-
 
         });
     }

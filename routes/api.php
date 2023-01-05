@@ -9,6 +9,8 @@ use App\Http\Controllers\Api\NewPasswordController;
 use App\Http\Controllers\AuctionController;
 use App\Http\Controllers\BidController;
 use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,7 +53,7 @@ Route::apiResource('/bids', BidController::class);
 Route::apiResource('/feedback', FeedbackController::class);
 
 //Categories
-Route::apiResource('/categories', CategoryController::class);
+Route::apiResource('/categories', CategoriesController::class);
 
 //Add Payment
 Route::apiResource('/payments', PaymentController::class);
