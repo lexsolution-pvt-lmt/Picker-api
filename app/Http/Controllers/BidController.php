@@ -16,7 +16,24 @@ class BidController extends Controller
      */
     public function index()
     {
-        return new BidCollection(Bid::all());
+        $auctionId = $id;
+        
+        //validate auction id
+        if (!$this->auctions->isValidAuction($auctionId)) {
+            return response()->json([
+                'message' => 'Auction not found',
+                'auction' => $auctionId
+            ], 404);
+        }
+
+        //get bids
+        $bids = $this->bids->getBidsForAuction($auctionId);
+
+        //return bids
+        return response()->json([
+            'message' => 'Bids retrieved successfully',
+            'bids' => $bids
+        ], 200);
         
     }
 
@@ -28,13 +45,35 @@ class BidController extends Controller
      */
     public function store(Request $request)
     {
-        $bid = new Bid();
-        $bid->id = $request->id;
-        $bid->bid_price = $request->bid_price;
-        $bid->auction_id = $request->auction_id;
-        $bid->user_id = $request->user_id;
-        $bid->save();
+        $auctionId =  $id;
 
+        //validate auction id
+        if (!$this->auctions->isValidAuction($auctionId)) {
+            return response()->json([
+                'message' => 'Auction not found',
+                'auction' => $auctionId
+            ], 404);
+        };
+
+        $userId = Auth::user()->id;
+
+        // validate the bid ammount, redirect back if invalid
+        $this->validate($request, [
+            'bid' => "required
+                    |not_auction_owner:{$auctionId},{$userId}
+                    |auction_is_open:{$auctionId}
+                    |money_format
+                    |bigger_than_current_bid:{$auctionId}
+                    |maximum_bid:999999.99
+                    |allowable_bid_amount:{$auctionId}"
+        ]);
+
+        $bidAmount = $request->get('bid');
+
+        //create bid
+        $bid = $this->bids->createBid($auctionId, $userId, $bidAmount);
+
+        //return bid
         return response()->json([
             'message' => 'Bid created successfully',
             'bid' => $bid
@@ -61,13 +100,7 @@ class BidController extends Controller
      */
     public function update(Request $request, Bid $bid)
     {
-       /* if ($bid->update($request->all())) {
-            return response()->json([
-                'message' => 'Bid updated successfully',
-                'bid' => $bid
-            ], 200);
-        }
-        */
+       //
     }
 
     /**
@@ -78,11 +111,6 @@ class BidController extends Controller
      */
     public function destroy(Bid $bid)
     {
-        if ($bid->delete()) {
-            return response()->json([
-                'message' => 'Bid deleted successfully',
-                'bid' => $bid
-            ], 200);
-        }
+       //
     }
 }
