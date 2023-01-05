@@ -14,16 +14,16 @@ class AuctionResource extends JsonResource
      */
     public function toArray($request)
     {
+        $bid = $this->bid;
+
         return [
             'id' => $this->id,
             'title' => $this->title,
             'description' => $this->description,
             'starting_price' => $this->starting_price,
-            'reserve_price' => $this->reserve_price,
-            'buy_now_price' => $this->buy_now_price,
-            'end_date' => $this->end_date,
-            'end_time' => $this->end_time,
             'status' => $this->status,
+
+            'bid' => BidResource::collection($bid)
         ];
     }
 }
