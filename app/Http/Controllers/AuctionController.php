@@ -10,22 +10,13 @@ use App\Http\Resources\Auction\AuctionCollection;
 
 class AuctionController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
         return new AuctionCollection(Auction::paginate(10));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+   
     public function store(Request $request)
     {
         $auction = new Auction();
@@ -48,31 +39,20 @@ class AuctionController extends Controller
         ], 201);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Auction  $auction
-     * @return \Illuminate\Http\Response
-     */
+   
     public function show(Auction $auction)
     {
-        
-        if ($auction->status == 'active') {
-            return new AuctionResource($auction);
-        } else {
-            return response()->json([
-                'message' => 'Auction not found'
-            ], 404);
-        }
+        //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Auction  $auction
-     * @return \Illuminate\Http\Response
-     */
+    public function getByCategory(Request $request, $category_name)
+    {
+        $auctions = Auction::whereHas('category', function ($query) use ($category_name) {
+            $query->where ('name', $category_name);
+        })->get();
+    }
+
+    
     public function update(Request $request, Auction $auction)
     {
         
@@ -94,12 +74,8 @@ class AuctionController extends Controller
             
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Auction  $auction
-     * @return \Illuminate\Http\Response
-     */
+    //Remove the specified resource from storage.
+     
     public function destroy(Auction $auction)
     {
         $auction->delete();

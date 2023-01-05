@@ -6,6 +6,7 @@ use App\Models\Bid;
 use Illuminate\Http\Request;
 use App\Http\Resources\Bid\BidCollection;
 use App\Http\Resources\Bid\BidResource;
+use App\Models\Auction;
 
 class BidController extends Controller
 {
@@ -14,7 +15,18 @@ class BidController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+    private $auction;
+
+    private $bids;
+
+    public function __construct(Auction $auctions, Bid $bids)
+    {
+        $this->auctions = $auctions;
+        $this->bids = $bids;
+    }
+
+    public function index($id)
     {
         $auctionId = $id;
         
@@ -43,7 +55,7 @@ class BidController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
         $auctionId =  $id;
 
