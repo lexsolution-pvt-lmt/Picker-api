@@ -34,6 +34,12 @@ Route::post('login', [AuthController::class, 'login']);
 Route::post('register', [AuthController::class, 'register']);
 Route::post('logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 
+// View Profile
+Route::get('profile', [UserController::class, 'getProfile'])->middleware('auth:sanctum');
+
+// Update Profile
+Route::put('profile', [UserController::class, 'updateProfile'])->middleware('auth:sanctum');
+
 // Email Verification Routes
 Route::post('email/verification-notification', [EmailVerificationController::class, 'sendVerificationEmail'])->middleware('auth:sanctum');
 Route::get('verify-email/{id}/{hash}', [EmailVerificationController::class, 'verify'])->name('verification.verify')->middleware('auth:sanctum');
