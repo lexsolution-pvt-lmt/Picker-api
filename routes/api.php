@@ -35,10 +35,10 @@ Route::post('register', [AuthController::class, 'register']);
 Route::post('logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 
 // View Profile
-Route::get('profile', [UserController::class, 'getProfile'])->middleware('auth:sanctum');
+Route::get('profile', [UserController::class, 'getProfile']);
 
 // Update Profile
-Route::put('profile', [UserController::class, 'updateProfile'])->middleware('auth:sanctum');
+Route::put('profile', [UserController::class, 'updateProfile']);
 
 // Email Verification Routes
 Route::post('email/verification-notification', [EmailVerificationController::class, 'sendVerificationEmail'])->middleware('auth:sanctum');
@@ -63,3 +63,9 @@ Route::apiResource('/categories', CategoriesController::class);
 
 //Add Payment
 Route::apiResource('/payments', PaymentController::class);
+
+//View Notifications
+Route::apiResource('/notifications', NotificationController::class);
+
+//Wishlist
+Route::apiResource('/wishlist', WishlistController::class);

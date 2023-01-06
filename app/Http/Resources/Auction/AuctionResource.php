@@ -23,7 +23,8 @@ class AuctionResource extends JsonResource
             'starting_price' => $this->starting_price,
             'status' => $this->status,
 
-            'bid' => BidResource::collection($bid)
+            'bid' => BidResource::collection($bid),
+            'wishlist' => WishlistResource::collection($this->wishlist)
         ];
     }
 }

@@ -20,7 +20,7 @@ class WishlistController extends Controller
 
     public function show(Wishlist $wishlist)
     {
-        //
+        return new WishlistResource($wishlist);
     }
 
     public function update(Request $request, Wishlist $wishlist)
