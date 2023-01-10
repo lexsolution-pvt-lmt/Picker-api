@@ -6,6 +6,7 @@ use App\Models\Bid;
 use Illuminate\Http\Request;
 use App\Http\Resources\Bid\BidCollection;
 use App\Http\Resources\Bid\BidResource;
+use App\Http\Resources\Auction\AuctionCollection;
 use App\Models\Auction;
 
 class BidController extends Controller
@@ -13,11 +14,10 @@ class BidController extends Controller
     // get all bid by auction id
     public function index()
     {
-       $bid = Bid::with(['auction.bid']);
-       return BidResource::collection($bid->paginate(10))->response();
+        return new BidCollection(Bid::all());
     }
 
-    public function store(Request $request, $id)
+    public function store(Request $request)
     {
        
         //create bid

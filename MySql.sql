@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 10, 2023 at 08:24 AM
+-- Generation Time: Jan 10, 2023 at 10:28 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,55 +24,59 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `auctions`
+-- Table structure for table `bids`
 --
 
-CREATE TABLE `auctions` (
+CREATE TABLE `bids` (
   `id` int(10) UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `starting_price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `reserve_price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `buy_now_price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `end_date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `end_time` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bid_price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` bigint(10) UNSIGNED NOT NULL,
+  `auction_id` int(10) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `bids`
+--
+
+INSERT INTO `bids` (`id`, `bid_price`, `user_id`, `auction_id`, `created_at`, `updated_at`) VALUES
+(1, '100', 1, 23, NULL, NULL),
+(2, '200', 2, 23, '2023-01-10 09:18:54', '2023-01-10 09:18:54'),
+(3, '230', 2, 23, '2023-01-10 09:25:13', '2023-01-10 09:25:13');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `auctions`
+-- Indexes for table `bids`
 --
-ALTER TABLE `auctions`
+ALTER TABLE `bids`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`);
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `auction_id` (`auction_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `auctions`
+-- AUTO_INCREMENT for table `bids`
 --
-ALTER TABLE `auctions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `bids`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `auctions`
+-- Constraints for table `bids`
 --
-ALTER TABLE `auctions`
-  ADD CONSTRAINT `auctions_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `bids`
+  ADD CONSTRAINT `bids_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `bids_ibfk_2` FOREIGN KEY (`auction_id`) REFERENCES `auctions` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
