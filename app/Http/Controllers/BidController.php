@@ -23,7 +23,9 @@ class BidController extends Controller
         //create bid
         $bid = Bid::create([
             'bid_price' => $request->bid_price,
-            'auction_id' => $id
+            'user_id' => $request->user_id,
+            'auction_id' => $request->auction_id,
+            
         ]);
 
         

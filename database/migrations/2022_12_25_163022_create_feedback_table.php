@@ -20,7 +20,7 @@ class CreateFeedbackTable extends Migration
 
             $table->unsignedInteger('auction_id')->unique();
             $table->unsignedInteger('feedback_type_id');
-            $table->unsignedInteger('left_by_user_id');
+            $table->unsignedInteger('user_id');
             
            
         });

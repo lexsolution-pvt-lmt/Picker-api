@@ -27,7 +27,6 @@ public function updateProfile(Request $request){
     try {
         $user = User::find($request->user()->id);
         $user->name = $request->name;
-        $user->image = $request->image;
         $user->email = $request->email;
         $user->password= $request->password;
         $user->save();

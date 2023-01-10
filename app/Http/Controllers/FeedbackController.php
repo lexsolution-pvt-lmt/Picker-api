@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Feedback;
+use App\Models\FeedbackType;
+use App\Models\Auction;
+
 use Illuminate\Http\Request;
 use App\Http\Resources\Feedback\FeedbackCollection;
 use App\Http\Resources\Feedback\FeedbackResource;
@@ -18,12 +21,13 @@ class FeedbackController extends Controller
 
     public function store(Request $request)
     {
-        $feedback = new Bid();
+        $feedback = new feedback();
         $feedback->id = $request->id;
-        $feedback->feedback = $request->feedback;
+        $feedback->message = $request->message;
         $feedback->auction_id = $request->auction_id;
         $feedback->feedback_type_id = $request->feedback_type_id;
-        $feedback->left_by_user_id = $request->left_by_user_id;
+        $feedback->user_id = $request->user_id;
+        
         $feedback->save();
 
         return response()->json([

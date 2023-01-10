@@ -15,6 +15,6 @@ class Feedback extends Model
         'messege',
         'auction_id',
         'feedback_type_id',
-        'left_by_user_id', 
+        'user_id', 
     ];
 }

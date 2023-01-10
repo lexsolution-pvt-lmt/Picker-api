@@ -4,24 +4,26 @@ namespace App\Http\Controllers;
 
 use App\Models\Payment;
 use Illuminate\Http\Request;
+use App\Http\Resources\Payment\PaymentCollection;
+use App\Http\Resources\Payment\PaymentResource;
 
 class PaymentController extends Controller
 {
     public function index()
     {
-        //
+        return new PaymentCollection(Payment::all());
     }
 
     public function store(Request $request)
     {
          $payment = new Payment();
+            $payment->id = $request->id;
             $payment->user_id = $request->user_id;
+            $payment->auction_id = $request->auction_id;
+            $payment->Bid_id = $request->bid_id;
             $payment->payment_option = $request->payment_option;
             $payment->payment_email = $request->payment_email;
             $payment->payment_details = $request->payment_details;
-            $payment->account_name = $request->account_name;
-            $payment->auction_id = $request->auction_id;
-            $payment->bid_id = $request->bid_id;
             $payment->save();
 
             return response()->json([
