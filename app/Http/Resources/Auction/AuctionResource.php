@@ -2,6 +2,8 @@
 
 namespace App\Http\Resources\Auction;
 
+use App\Http\Resources\Wishlist\WishlistResource;
+use App\Http\Resources\Bid\BidResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class AuctionResource extends JsonResource
@@ -23,8 +25,8 @@ class AuctionResource extends JsonResource
             'starting_price' => $this->starting_price,
             'status' => $this->status,
 
-            'bid' => BidResource::collection($bid),
-            'wishlist' => WishlistResource::collection($this->wishlist)
+           
+            //'wishlist' => WishlistResource::collection($this->wishlist)
         ];
     }
 }

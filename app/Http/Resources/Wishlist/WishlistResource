@@ -3,6 +3,7 @@
 namespace App\Http\Resources\Wishlist;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Resources\Auction\AuctionResource;
 
 class WishlistResource extends JsonResource
 {
@@ -18,7 +19,7 @@ class WishlistResource extends JsonResource
 
         return [
             'user_id' => $this->user_id,
-            'auction' => AuctionResource::collection($auction)
+            'auction_id' => $this->auction_id,
         ];
     }
 }

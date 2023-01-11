@@ -11,7 +11,6 @@ use App\Models\Auction;
 
 class BidController extends Controller
 {
-    // get all bid by auction id
     public function index()
     {
         return new BidCollection(Bid::all());
@@ -20,7 +19,6 @@ class BidController extends Controller
     public function store(Request $request)
     {
        
-        //create bid
         $bid = Bid::create([
             'bid_price' => $request->bid_price,
             'user_id' => $request->user_id,
@@ -28,7 +26,6 @@ class BidController extends Controller
             
         ]);
 
-        
         return response()->json([
             'message' => 'Bid created successfully',
             'bid' => $bid

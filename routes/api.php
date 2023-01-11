@@ -11,6 +11,7 @@ use App\Http\Controllers\BidController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\WishlistController;
 
 /*
 |--------------------------------------------------------------------------

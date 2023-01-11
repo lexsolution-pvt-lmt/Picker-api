@@ -52,7 +52,11 @@ class AuctionController extends Controller
     
     public function update(Request $request, Auction $auction)
     {  
-      //     
+          $auction->update($request->all());
+            return response()->json([
+                'message' => 'Auction updated successfully',
+                'auction' => $auction
+            ], 200);    
     }
 
      
