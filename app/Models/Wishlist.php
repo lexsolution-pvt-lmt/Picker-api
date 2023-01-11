@@ -13,4 +13,6 @@ class Wishlist extends Model
         'user_id',
         'auction_id',
     ];
+
+    
 }

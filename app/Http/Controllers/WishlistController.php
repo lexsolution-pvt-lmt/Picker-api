@@ -13,6 +13,9 @@ class WishlistController extends Controller
     public function index()
     {
         return WishlistCollection::collection(Wishlist::all());
+        //get all wish list by user_id ?
+
+        
     }
 
     public function store(Request $request)
@@ -30,15 +33,8 @@ class WishlistController extends Controller
 
     public function show(Wishlist $wishlist)
     {
-        //return new WishlistResource($wishlist);
+        return new WishlistResource($wishlist);
 
-        if ($wishlist->user_id == auth()->user()->id) {
-            return new WishlistResource($wishlist);
-        } else {
-            return response()->json([
-                'message' => 'You are not authorized to view this wishlist'
-            ], 401);
-        }
     }
 
     public function update(Request $request, Wishlist $wishlist)
@@ -49,15 +45,6 @@ class WishlistController extends Controller
     
     public function destroy(Wishlist $wishlist)
     {
-        if ($wishlist->user_id == auth()->user()->id) {
-            $wishlist->delete();
-            return response()->json([
-                'message' => 'Wishlist deleted successfully'
-            ], 200);
-        } else {
-            return response()->json([
-                'message' => 'You are not authorized to delete this wishlist'
-            ], 401);
-        }
+        //
     }
 }
