@@ -9,7 +9,7 @@
 							<span class="nav-text">Auction</span>
 						</a>
                         <ul aria-expanded="false">
-							<li><a href="index.html">Auction Managment</a></li>
+							<li><a href="{{url('admin/auctions')}}">Auction Managment</a></li>
 							<li><a href="patient-list.html">Auction Caregory Managment</a></li>
 						</ul>
                     </li>
@@ -36,8 +36,8 @@
 					<a class="text-white fs-26" href="javascript:;"><i class="las la-long-arrow-alt-right"></i></a>
 				</div>
 				<div class="copyright">
-					<p class="fs-14 font-w200"><strong class="font-w400">Eres Hospital Admin Dashboard</strong> © 2020 All Rights Reserved</p>
-					<p>Made with <i class="fa fa-heart"></i> by DexignZone</p>
+					<p class="fs-14 font-w200"><strong class="font-w400">Picker Auction Website</strong> © 2023 All Rights Reserved</p>
+					<p>Made with <i class="fa fa-heart"></i> by LexSolution</p>
 				</div>
 			</div>
         </div>
