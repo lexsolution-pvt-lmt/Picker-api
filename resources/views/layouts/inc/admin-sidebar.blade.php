@@ -18,7 +18,7 @@
 							<span class="nav-text">Payment</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="./app-profile.html">View Payment Details</a></li>
+                            <li><a href="{{url('admin/payments')}}">View Payment Details</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">

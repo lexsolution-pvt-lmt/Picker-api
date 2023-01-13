@@ -1,8 +1,8 @@
 @extends('layouts.master')
  
-@selection('title','Auction')
+@selection('title','Payments')
 
-<!--**********************************
+        <!--**********************************
             Header start
         ***********************************-->
         <div class="header">
@@ -11,7 +11,7 @@
                     <div class="collapse navbar-collapse justify-content-between">
                         <div class="header-left">
                             <div class="dashboard_bar">
-                                Auction Managment
+                                View Payments
                             </div>
                         </div>
 
@@ -128,7 +128,7 @@
         <!--**********************************
             Header end ti-comment-alt
         ***********************************-->
-         <!--**********************************
+          <!--**********************************
             Content body start
         ***********************************-->
         <div class="content-body">
@@ -142,59 +142,61 @@
                 <!-- row -->
 
                 <div class="row">
+                   
+                   
+                    
+                    
+                    
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Recent Payments Queue</h4>
+                                <h4 class="card-title">Payment Table</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table table-responsive-md">
+                                    <table class="table header-border table-responsive-sm">
                                         <thead>
                                             <tr>
-                                                <th class="width80"><strong>#</strong></th>
-                                                <th><strong>Title</strong></th>
-                                                <th><strong>Description</strong></th>
-                                                <th><strong>Image</strong></th>
-                                                <th><strong>Starting Price</strong></th>
-                                                <th><strong>Reserve Price</strong></th>
-                                                <th><strong>Buy Now Price</strong></th>
-                                                <th><strong>Status</strong></th>
-                                                
+                                                <th>Email</th> 
+                                                <th>Details</th> 
+                                                <th>Date</th> 
+                                                <th>Method</th> 
+                                                <th>User ID</th> 
+                                                <th>Auction ID</th> 
+                                                <th>Bid ID</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                         @foreach ($auction as $au)
-                                         @endforeach
+                                        @foreach ($payment as $pay) 
+                                        @endforeach 
                                             <tr>
-                                                <td>{{$au['id']}}</td>
-                                                <td>{{$au['title']}}</td>
-                                                <td>{{$au['description']}}</td>
-                                                <td>{{$au['image']}}</td>
-                                                <td>{{$au['starting_price']}}</td>
-                                                <td>{{$au['reserve_price']}}</td>
-                                                <td>{{$au['buy_now_price']}}</td>
-                                                <td>{{$au['status']}}</td>
-                                           
-                                                <td>
-													<div class="dropdown">
-														<button type="button" class="btn btn-success light sharp" data-toggle="dropdown">
-															<svg width="20px" height="20px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><circle fill="#000000" cx="5" cy="12" r="2"/><circle fill="#000000" cx="12" cy="12" r="2"/><circle fill="#000000" cx="19" cy="12" r="2"/></g></svg>
-														</button>
-														<div class="dropdown-menu">
-															<a class="dropdown-item" href="#">Edit</a>
-															<a class="dropdown-item" href="#">Delete</a>
-														</div>
-													</div>
-												</td>
+                                                <td>{{$pay['payment_email']}}</td> 
+                                                <td>{{$pay['payment_details']}}</td> 
+                                                <td>{{$pay['created_at']}}</td> 
+                                                <td>{{$pay['payment_option']}}</td> 
+                                                <td>{{$pay['user_id']}}</td> 
+                                                <td>{{$pay['auction_id']}}</td> 
+                                                <td>{{$pay['bid_id']}}</td> 
                                             </tr>
-											
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
+                    
+                    
+                    
+                    
                 </div>
             </div>
         </div>
