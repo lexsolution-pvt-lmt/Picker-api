@@ -18,36 +18,28 @@
 
 @include('layouts/inc/admin-navbar')
 
-<div id='layoutSidenav'>
 
-    @include('layouts/inc/admin-sidebar')
 
-    <div id = 'layoutsSidenav_content'>
-        <Main>
-            
-            @yield('content')
+@include('layouts/main')  
 
-        </Main>
+   
 
-    @include('layouts/inc/admin-footer')
+@include('layouts/inc/admin-footer')
        
-    </div>
 
-</div>
 
     
 <!-- Required vendors -->
     <script src="{{ asset('assets/vendor/global/global.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/chart.js/Chart.bundle.min.js') }}"></script>
+	<script src="{{ asset('assets/js/custom.min.js') }}"></script>
     <script src="{{ asset('assets/js/deznav-init.js') }}"></script>
-    
-   
-	<script src="./vendor/owl-carousel/owl.carousel.js"></script>
-	
-	
-	<!-- Dashboard 1 -->
+
+    <script src="{{ asset('assets/vendor/owl-carousel/owl.carousel.js') }}"></script>
+    <script src="{{ asset('assets/vendor/chart.js/Chart.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/dashboard/dashboard-1.js') }}"></script>
+    
+    
     
 	
 </body>
