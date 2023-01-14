@@ -14,9 +14,8 @@ class AuctionController extends Controller
     public function index()
     {     
         return new AuctionCollection(Auction::paginate(10));
-
-        
-       
+       // $data = auction::all();
+       // return view('admin.auction.index', ['auction'=>$data]);  
     }
 
    
@@ -35,6 +34,8 @@ class AuctionController extends Controller
         $auction->status = $request->status;
         $auction->user_id = $request->user_id;
         $auction->save();
+
+        //return view('admin.auction.create');
 
         return response()->json([
             'message' => 'Auction created successfully',

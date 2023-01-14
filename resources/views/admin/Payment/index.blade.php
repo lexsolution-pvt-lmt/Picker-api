@@ -179,12 +179,13 @@
                                                 <td>{{$pay['bid_id']}}</td> 
                                             </tr>
                                             <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <td>{{$pay['']}}</td>
+                                                <td>{{$pay['']}}</td>
+                                                <td>{{$pay['']}}</td>
+                                                <td>{{$pay['']}}</td>
+                                                <td>{{$pay['']}}</td>
+                                                <td>{{$pay['']}}</td>
+                                                <td>{{$pay['']}}</td>
                                             </tr>
                                         </tbody>
                                     </table>

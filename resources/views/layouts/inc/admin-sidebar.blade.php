@@ -6,10 +6,11 @@
 				<ul class="metismenu" id="menu">
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-networking"></i>
-							<span class="nav-text">Auction</span>
+							<span class="nav-text">Auction </span>
 						</a>
                         <ul aria-expanded="false">
-							<li><a href="{{url('admin/auctions')}}">Auction Managment</a></li>
+							<li><a href="{{url('admin/auctions')}}">View Auction</a></li>
+                            <li><a href="{{url('admin/auctions/create')}}">Create Auction</a></li>
 							<li><a href="patient-list.html">Auction Caregory Managment</a></li>
 						</ul>
                     </li>
@@ -23,10 +24,11 @@
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-controls-3"></i>
-							<span class="nav-text">User</span>
+							<span class="nav-text">All User</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="./chart-flot.html">All User Managment</a></li>
+                            <li><a href="{{url('admin/users')}}">View All User </a></li>
+                            <li><a href="{{url('admin/auctions/create')}}">Create User</a></li>
                         </ul>
                     </li>
                 </ul>

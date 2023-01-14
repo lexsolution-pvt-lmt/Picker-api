@@ -27,6 +27,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/auctions' , [App\Http\Controllers\Admin\AuctionController::class, 'index'])->name('Auctions');
     Route::get('/auctions/create', [App\Http\Controllers\Admin\AuctionController::class, 'create'])->name('Auctions.create');
     Route::get('/payments', [App\Http\Controllers\Admin\PaymentController::class, 'index'])->name('Payments');
+    Route::get('/users', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('Users');
 });
 
 Route:: get('/login', [App\Http\Controllers\Auth\LoginController::class, 'index'])->name('Login');

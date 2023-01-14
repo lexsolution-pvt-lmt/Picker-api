@@ -12,6 +12,8 @@ class PaymentController extends Controller
     public function index()
     {
         return new PaymentCollection(Payment::all());
+       // $data = payment::all();
+       // return view('admin.payment.index', ['payment'=>$data]);
     }
 
     public function store(Request $request)
