@@ -38,8 +38,10 @@ Route::post('logout', [AuthController::class, 'logout'])->middleware('auth:sanct
 // View Profile
 Route::get('profile', [UserController::class, 'getProfile']);
 
+
 // Update Profile
 Route::put('profile', [UserController::class, 'updateProfile']);
+//Route::delete('profile/delete', [UserController::class, 'destroy']);
 
 // Email Verification Routes
 Route::post('email/verification-notification', [EmailVerificationController::class, 'sendVerificationEmail'])->middleware('auth:sanctum');

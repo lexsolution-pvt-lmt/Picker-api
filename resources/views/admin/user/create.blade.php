@@ -11,7 +11,7 @@
                     <div class="collapse navbar-collapse justify-content-between">
                         <div class="header-left">
                             <div class="dashboard_bar">
-                                Users
+                                Add User
                             </div>
                         </div>
 
@@ -120,66 +120,94 @@
         <!--**********************************
             Header end ti-comment-alt
         ***********************************-->
- <!--**********************************
+        <!--**********************************
             Content body start
         ***********************************-->
         <div class="content-body">
             <div class="container-fluid">
-                <div class="page-titles">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="javascript:void(0)">Table</a></li>
-						<li class="breadcrumb-item active"><a href="javascript:void(0)">Bootstrap</a></li>
-					</ol>
+                <div class="row page-titles">
+                    <div class="col-sm-6 p-md-0">
+                        <div class="welcome-text">
+                            <h4>Hi, Add More!</h4>
+                            <p class="mb-0">All are required</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Form</a></li>
+                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Validation</a></li>
+                        </ol>
+                    </div>
                 </div>
                 <!-- row -->
-
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">All User Table</h4>
+                                <h4 class="card-title">Add New User</h4>
                             </div>
                             <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-responsive-md">
-                                        <thead>
-                                            <tr>
-                                                <th class="width80"><strong>#</strong></th>
-                                                <th><strong>Profile</strong></th>
-                                                <th><strong>Name</strong></th>
-                                                <th><strong>E mail</strong></th>
-                                                <th>Auction</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        @foreach ($user as $us)
-                                        
-
-											<tr>
-                                                <td>{{$us['id']}}</td>
-                                                <td>{{$us['image']}}</td>
-                                                <td>{{$us['name']}}</td>
-                                                <td>{{$us['email']}}</td>
-                                                <td>
-													<div class="dropdown">
-														<button type="button" class="btn btn-success light sharp" data-toggle="dropdown">
-															<svg width="20px" height="20px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><circle fill="#000000" cx="5" cy="12" r="2"/><circle fill="#000000" cx="12" cy="12" r="2"/><circle fill="#000000" cx="19" cy="12" r="2"/></g></svg>
-														</button>
-														<div class="dropdown-menu">
-															<a class="dropdown-item" href="#">Edit</a>
-															<a class="dropdown-item" href="{{url('api/profile/delete')}}">Delete</a>
-														</div>
-													</div>
-												</td>
-                                            </tr> 
-                                            @endforeach                                              
-                                        </tbody>
-                                    </table>
+                                <div class="form-validation">
+                                    <form class="form-valide" action="#" method="post">
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label" for="val-username">Username
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control" id="val-username" name="val-username" placeholder="Enter a username..">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label" for="val-email">Email <span
+                                                            class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control" id="val-email" name="val-email" placeholder="Your valid email..">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label" for="val-password">Password
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="password" class="form-control" id="val-password" name="val-password" placeholder="Choose a safe one..">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label" for="val-confirm-password">Confirm Password <span
+                                                            class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="password" class="form-control" id="val-confirm-password" name="val-confirm-password" placeholder="..and confirm it!">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label" for="val-confirm-password">Uplode Image <span
+                                                            class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="password" class="form-control" id="val-confirm-password" name="val-confirm-password" placeholder="..and confirm it!">
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-8 ml-auto">
+                                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-				</div>
+                </div>
             </div>
         </div>
         <!--**********************************

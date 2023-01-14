@@ -14,5 +14,18 @@ class UserController extends Controller
         return view('admin.user.index', ['user'=>$data]);
 
     }
+
+    public function create() 
+    {
+        $data = user::all();
+        return view('admin.user.create', ['user'=>$data]);
+
+    }
+
+    public function show(User $user)
+    {
+        $data = user::all('id');
+        return view('admin.user.create', ['user'=>$data]);
+    }
 }
 

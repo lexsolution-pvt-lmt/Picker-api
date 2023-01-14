@@ -42,4 +42,10 @@ public function updateProfile(Request $request){
     }
        
     }
+
+    public function destroy(User $user)
+    {
+        //$user = User::find($request->user()->id);
+        //$user->delete();
+    }
 }

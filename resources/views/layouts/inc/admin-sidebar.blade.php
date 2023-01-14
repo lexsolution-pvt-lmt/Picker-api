@@ -11,7 +11,7 @@
                         <ul aria-expanded="false">
 							<li><a href="{{url('admin/auctions')}}">View Auction</a></li>
                             <li><a href="{{url('admin/auctions/create')}}">Create Auction</a></li>
-							<li><a href="patient-list.html">Auction Caregory Managment</a></li>
+							<li><a href="{{url('admin/categories')}}">Auction Caregory Managment</a></li>
 						</ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -28,7 +28,7 @@
 						</a>
                         <ul aria-expanded="false">
                             <li><a href="{{url('admin/users')}}">View All User </a></li>
-                            <li><a href="{{url('')}}">Create User</a></li>
+                            <li><a href="{{url('admin/users/create')}}">Create User</a></li>
                         </ul>
                     </li>
                 </ul>

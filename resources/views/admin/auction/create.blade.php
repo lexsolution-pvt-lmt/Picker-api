@@ -37,19 +37,11 @@
                                 <a class="nav-link" href="javascript:;" role="button" data-toggle="dropdown">
                                     <img src="images/profile/12.png" width="20" alt=""/>
 									<div class="header-info">
-										<span>Hello,<strong> Roberto</strong></span>
+										<span>Admin</strong></span>
 									</div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
-                                    <a href="./app-profile.html" class="dropdown-item ai-icon">
-                                        <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                        <span class="ml-2">Profile </span>
-                                    </a>
-                                    <a href="./email-inbox.html" class="dropdown-item ai-icon">
-                                        <svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                                        <span class="ml-2">Inbox </span>
-                                    </a>
-                                    <a href="./page-login.html" class="dropdown-item ai-icon">
+                                    <a href="{{url('/login')}}" class="dropdown-item ai-icon">
                                         <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
                                         <span class="ml-2">Logout </span>
                                     </a>
@@ -96,7 +88,7 @@
                                         <div class="row">
                                             <div class="col-xl-6">
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-username">Username
+                                                    <label class="col-lg-4 col-form-label" for="val-username">Title
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
@@ -104,7 +96,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-email">Email <span
+                                                    <label class="col-lg-4 col-form-label" for="val-email">Description <span
                                                             class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
@@ -112,111 +104,75 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-password">Password
+                                                    <label class="col-lg-4 col-form-label" for="val-password">image
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="password" class="form-control" id="val-password" name="val-password" placeholder="Choose a safe one..">
+                                                        <input type="text" class="form-control" id="img" name="val-password" placeholder="Choose a safe one..">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-confirm-password">Confirm Password <span
-                                                            class="text-danger">*</span>
-                                                    </label>
-                                                    <div class="col-lg-6">
-                                                        <input type="password" class="form-control" id="val-confirm-password" name="val-confirm-password" placeholder="..and confirm it!">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-suggestions">Suggestions <span
-                                                            class="text-danger">*</span>
-                                                    </label>
-                                                    <div class="col-lg-6">
-                                                        <textarea class="form-control" id="val-suggestions" name="val-suggestions" rows="5" placeholder="What would you like to see?"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-6">
-                                                <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-skill">Best Skill
+                                                    <label class="col-lg-4 col-form-label" for="val-currency">Starting Price
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <select class="form-control" id="val-skill" name="val-skill">
-                                                            <option value="">Please select</option>
-                                                            <option value="html">HTML</option>
-                                                            <option value="css">CSS</option>
-                                                            <option value="javascript">JavaScript</option>
-                                                            <option value="angular">Angular</option>
-                                                            <option value="angular">React</option>
-                                                            <option value="vuejs">Vue.js</option>
-                                                            <option value="ruby">Ruby</option>
-                                                            <option value="php">PHP</option>
-                                                            <option value="asp">ASP.NET</option>
-                                                            <option value="python">Python</option>
-                                                            <option value="mysql">MySQL</option>
-                                                        </select>
+                                                        <input type="text" class="form-control" id="sprice" name="val-currency" placeholder="$21.60">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-currency">Currency
+                                                    <label class="col-lg-4 col-form-label" for="val-currency">Reserve Price
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="val-currency" name="val-currency" placeholder="$21.60">
+                                                        <input type="text" class="form-control" id="rprice" name="val-currency" placeholder="$21.60">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-website">Website
+                                                    <label class="col-lg-4 col-form-label" for="val-currency">Buy Now Price
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="val-website" name="val-website" placeholder="http://example.com">
+                                                        <input type="text" class="form-control" id="binprice" name="val-currency" placeholder="$21.60">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-phoneus">Phone (US)
+                                                    <label class="col-lg-4 col-form-label" for="val-currency">End Date
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="val-phoneus" name="val-phoneus" placeholder="212-999-0000">
+                                                        <input type="text" class="form-control" id="edate" name="val-currency" placeholder="01/01/2023">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-digits">Digits <span
-                                                            class="text-danger">*</span>
-                                                    </label>
-                                                    <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="val-digits" name="val-digits" placeholder="5">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-number">Number <span
-                                                            class="text-danger">*</span>
-                                                    </label>
-                                                    <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="val-number" name="val-number" placeholder="5.0">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-range">Range [1, 5]
+                                                    <label class="col-lg-4 col-form-label" for="val-currency">End Time
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="val-range" name="val-range" placeholder="4">
+                                                        <input type="text" class="form-control" id="etime" name="val-currency" placeholder="00.00">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label"><a
-                                                            href="javascript:void()">Terms &amp; Conditions</a> <span
-                                                            class="text-danger">*</span>
+                                                    <label class="col-lg-4 col-form-label" for="val-currency">Status
+                                                        <span class="text-danger">*</span>
                                                     </label>
-                                                    <div class="col-lg-8">
-                                                        <label class="css-control css-control-primary css-checkbox" for="val-terms">
-                                                            <input type="checkbox" class="css-control-input mr-2"
-                                                                id="val-terms" name="val-terms" value="1">
-                                                            <span class="css-control-indicator"></span> I agree to the
-                                                            terms</label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control" id="etime" name="val-currency" placeholder="Active/Inactive">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label" for="val-currency">User ID
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control" id="uid" name="val-currency" placeholder="1">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label" for="val-currency">Category ID
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control" id="cid" name="val-currency" placeholder="1">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -225,6 +181,10 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        
+                                            
+                                                
+                                           
                                         </div>
                                     </form>
                                 </div>
