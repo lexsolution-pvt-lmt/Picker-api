@@ -25,6 +25,8 @@ class CreateAuctionsTable extends Migration
             $table->string('end_time');
             $table->string('status');
             $table->string('user_id');
+            $table->string('category-_id');
+            
             $table->timestamps();
         });
     }

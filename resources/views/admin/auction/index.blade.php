@@ -160,12 +160,11 @@
                                                 <th><strong>Reserve Price</strong></th>
                                                 <th><strong>Buy Now Price</strong></th>
                                                 <th><strong>Status</strong></th>
-                                                
+                                                <th>Action</th>   
                                             </tr>
                                         </thead>
                                         <tbody>
                                          @foreach ($auction as $au)
-                                         @endforeach
                                             <tr>
                                                 <td>{{$au['id']}}</td>
                                                 <td>{{$au['title']}}</td>
@@ -175,7 +174,6 @@
                                                 <td>{{$au['reserve_price']}}</td>
                                                 <td>{{$au['buy_now_price']}}</td>
                                                 <td>{{$au['status']}}</td>
-                                           
                                                 <td>
 													<div class="dropdown">
 														<button type="button" class="btn btn-success light sharp" data-toggle="dropdown">
@@ -188,7 +186,7 @@
 													</div>
 												</td>
                                             </tr>
-											
+										@endforeach	
                                         </tbody>
                                     </table>
                                 </div>

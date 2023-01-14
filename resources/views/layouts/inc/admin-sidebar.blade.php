@@ -28,7 +28,7 @@
 						</a>
                         <ul aria-expanded="false">
                             <li><a href="{{url('admin/users')}}">View All User </a></li>
-                            <li><a href="{{url('admin/auctions/create')}}">Create User</a></li>
+                            <li><a href="{{url('')}}">Create User</a></li>
                         </ul>
                     </li>
                 </ul>

@@ -168,7 +168,7 @@
                                         </thead>
                                         <tbody>
                                         @foreach ($payment as $pay) 
-                                        @endforeach 
+                                        
                                             <tr>
                                                 <td>{{$pay['payment_email']}}</td> 
                                                 <td>{{$pay['payment_details']}}</td> 
@@ -178,15 +178,7 @@
                                                 <td>{{$pay['auction_id']}}</td> 
                                                 <td>{{$pay['bid_id']}}</td> 
                                             </tr>
-                                            <tr>
-                                                <td>{{$pay['']}}</td>
-                                                <td>{{$pay['']}}</td>
-                                                <td>{{$pay['']}}</td>
-                                                <td>{{$pay['']}}</td>
-                                                <td>{{$pay['']}}</td>
-                                                <td>{{$pay['']}}</td>
-                                                <td>{{$pay['']}}</td>
-                                            </tr>
+                                        @endforeach  
                                         </tbody>
                                     </table>
                                 </div>
