@@ -160,11 +160,11 @@
 								<h3 class="fs-20 mb-0 text-black">Revenue</h3>
 								<div class="dropdown d-inline-block">
 									<div class="btn-link text-primary dropdown-toggle mb-0 fs-14 text-primary" data-toggle="dropdown">
-										<span class="font-w500">2020</span>
+										<span class="font-w500">2023</span>
 									</div>
 									<div class="dropdown-menu dropdown-menu-left">
-										<a class="dropdown-item" href="javascript:void(0);">2019</a>
-										<a class="dropdown-item" href="javascript:void(0);">2018</a>
+										<a class="dropdown-item" href="javascript:void(0);">2020</a>
+										<a class="dropdown-item" href="javascript:void(0);">2023</a>
 									</div>
 								</div>
 							</div>
@@ -180,7 +180,7 @@
 					<div class="col-xl-9 col-xxl-8 col-lg-8">
 						<div class="card">	
 							<div class="card-header d-sm-flex d-block border-0 pb-0">
-								<h3 class="fs-20 mb-3 mb-sm-0 text-black">Patient Statistic</h3>
+								<h3 class="fs-20 mb-3 mb-sm-0 text-black">Auction Statistic</h3>
 								<div class="card-action card-tabs mt-3 mt-sm-0 mt-3 mt-sm-0">
 									<ul class="nav nav-tabs" role="tablist">
 										<li class="nav-item">
@@ -218,9 +218,9 @@
 										<div class="text-center">
 											<img src="images/doctors/5.jpg" alt="" >
 											<div class="dr-star"><i class="las la-star"></i> 4.2</div>
-											<h5 class="fs-16 mb-1 font-w600"><a class="text-black" href="page-review.html">Dr. Alexandro Jr.</a></h5>
-											<span class="text-primary mb-2 d-block">Dentist</span>
-											<p class="fs-12">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
+											<h5 class="fs-16 mb-1 font-w600"><a class="text-black" href="page-review.html">Alexandro Jr.</a></h5>
+											<span class="text-primary mb-2 d-block">Seller</span>
+											<p class="fs-12">ID 001</p>
 											<div class="social-media">
 												<a href="javascript:void(0);"><i class="lab la-instagram"></i></a>
 												<a href="javascript:void(0);"><i class="lab la-facebook-f"></i></a>
@@ -232,9 +232,9 @@
 										<div class="text-center">
 											<img src="images/doctors/1.jpg" alt="" >
 											<div class="dr-star"><i class="las la-star"></i> 4.2</div>
-											<h5 class="fs-16 mb-1 font-w600"><a class="text-black" href="page-review.html">Dr. Samantha</a></h5>
-											<span class="text-primary mb-2 d-block">Physical Therapy</span>
-											<p class="fs-12">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
+											<h5 class="fs-16 mb-1 font-w600"><a class="text-black" href="page-review.html">Chandana bandara</a></h5>
+											<span class="text-primary mb-2 d-block">Seller</span>
+											<p class="fs-12">ID 002</p>
 											<div class="social-media">
 												<a href="javascript:void(0);"><i class="lab la-instagram"></i></a>
 												<a href="javascript:void(0);"><i class="lab la-facebook-f"></i></a>
@@ -246,9 +246,9 @@
 										<div class="text-center">
 											<img src="images/doctors/2.jpg" alt="" >
 											<div class="dr-star"><i class="las la-star"></i> 4.2</div>
-											<h5 class="fs-16 mb-1 font-w600"><a class="text-black" href="page-review.html">Dr. Aliandro M</a></h5>
-											<span class="text-primary mb-2 d-block">Nursing</span>
-											<p class="fs-12">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
+											<h5 class="fs-16 mb-1 font-w600"><a class="text-black" href="page-review.html">Hasitha Thushan</a></h5>
+											<span class="text-primary mb-2 d-block">Seller</span>
+											<p class="fs-12">Id 003</p>
 											<div class="social-media">
 												<a href="javascript:void(0);"><i class="lab la-instagram"></i></a>
 												<a href="javascript:void(0);"><i class="lab la-facebook-f"></i></a>
