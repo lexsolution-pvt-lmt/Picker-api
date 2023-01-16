@@ -8572,7 +8572,7 @@ button.bg-dark:focus {
   color: #fff !important; }
 
 .text-primary {
-  color: #36C95F !important; }
+  color: #ff8f16f2 !important; }
 
 a.text-primary:hover, a.text-primary:focus {
   color: #268d43 !important; }
@@ -27803,11 +27803,11 @@ span#counter {
     border-radius: 5px;
     padding: 8px 15px;
     font-weight: 500;
-    color: #36C95F;
+    color: #ff8f16f2;
     font-size: 14px;
     border: 0; }
     .card-tabs .nav-tabs .nav-link.active {
-      background: #36C95F;
+      background: #ff8f16f2;
       color: #fff; }
   .card-tabs .nav-tabs .nav-item {
     display: inline-block; }
@@ -27970,7 +27970,7 @@ span#counter {
   margin-left: auto;
   margin-right: auto; }
 .assigned-doctor .dr-star {
-  background: #36C95F;
+  background: #ff8f16f2;
   color: #fff;
   display: inline-block;
   font-size: 12px;
