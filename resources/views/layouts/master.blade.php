@@ -42,7 +42,21 @@
     
     <script>
         const formE1 = document.querySelector('.form');
-        formE1.addEventList('submit')
+        formE1.addEventList('submit', event => {
+            event.preventDefault();
+
+            const formData = new FormData(formE1);
+            const data = Object.formEntries(formData);
+
+            fetch('http://http://127.0.0.1:8000/api/register',{
+                method: 'POST'
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+        })
     </script>
     
 	

@@ -342,7 +342,7 @@ sup {
   top: -.5em; }
 
 a {
-  color: #36C95F;
+  color: #f08d31;
   text-decoration: none;
   background-color: transparent; }
   a:hover {
@@ -2308,8 +2308,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #36C95F;
-  border-color: #36C95F; }
+  background-color: #ff8f16f2;
+  border-color: #fa8406f2; }
   .btn-primary:hover {
     color: #fff;
     background-color: #2eab51;
@@ -5224,7 +5224,7 @@ a.close.disabled {
   vertical-align: text-top !important; }
 
 .bg-primary {
-  background-color: #36C95F !important; }
+  background-color: #ff8f16f2 !important; }
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
@@ -9535,7 +9535,7 @@ a {
       text-align: center;
       margin: 0; }
     .footer .copyright a {
-      color: #36C95F; }
+      color: #ff8f16f2; }
 
 [data-sidebar-style="mini"] .nav-control,
 [data-layout="horizontal"] .nav-control {
@@ -10074,7 +10074,7 @@ svg.pulse-svg {
           display: none; } }
       .header-right .header-profile > a.nav-link .header-info span {
         font-size: 16x;
-        color: #36C95F;
+        color: #ff8f16f2;
         display: block;
         font-weight: 400; }
         @media only screen and (max-width: 1199px) {
@@ -10088,7 +10088,7 @@ svg.pulse-svg {
   .header-right .header-profile img {
     width: 56px;
     height: 56px;
-    border: 1px solid #36C95F;
+    border: 1px solid #ff8f16f2;
     border-radius: 3rem; }
     @media only screen and (max-width: 1199px) {
       .header-right .header-profile img {
@@ -12194,7 +12194,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
         .deznav .metismenu > li > a g [fill] {
           fill: #8088a1; }
       .deznav .metismenu > li:hover > a, .deznav .metismenu > li:focus > a {
-        color: #36C95F; }
+        color: #ff8f16f2; }
         .deznav .metismenu > li:hover > a g [fill], .deznav .metismenu > li:focus > a g [fill] {
           fill: #36C95F; }
       .deznav .metismenu > li.mm-active > a {
@@ -12220,7 +12220,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
             font-size: 14px; } }
         .deznav .metismenu ul a:hover, .deznav .metismenu ul a:focus, .deznav .metismenu ul a.mm-active {
           text-decoration: none;
-          color: #36C95F; }
+          color: #ff8f16f2; }
     .deznav .metismenu a {
       position: relative;
       display: block;
@@ -12476,7 +12476,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
       [data-sidebar-style="full"][data-layout="vertical"] .deznav .metismenu > li > a {
         font-size: 16px; } }
   [data-sidebar-style="full"][data-layout="vertical"] .deznav .metismenu > li.mm-active > a {
-    background: #36C95F;
+    background: #ff8f16f2;
     color: #fff; }
     [data-sidebar-style="full"][data-layout="vertical"] .deznav .metismenu > li.mm-active > a i {
       color: #fff;
@@ -15932,7 +15932,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 
 [data-headerbg="color_1"] .nav-header .hamburger.is-active .line,
 [data-headerbg="color_1"] .nav-header .hamburger .line {
-  background: #36C95F !important; }
+  background: #ff8f16f2 !important; }
 
 @media (min-width: 992px) {
   [data-container="boxed"] #main-wrapper {
