@@ -75,7 +75,7 @@
                     <div class="collapse navbar-collapse justify-content-between">
                         <div class="header-left">
                             <div class="dashboard_bar">
-                                Users
+                                Auction Managment
                             </div>
                         </div>
 
@@ -166,7 +166,7 @@
                                 <a class="nav-link" href="javascript:;" role="button" data-toggle="dropdown">
                                     <img src="images/profile/12.png" width="20" alt=""/>
 									<div class="header-info">
-										<span>Hello,<strong> Roberto</strong></span>
+										<span>Admin</strong></span>
 									</div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -204,7 +204,7 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">All User Table</h4>
+                                <h4 class="card-title">All Categories Table</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">

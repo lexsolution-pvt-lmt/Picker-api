@@ -15,6 +15,8 @@
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 </head>
 <body>
+
+
     
     <!--**********************************
         Main wrapper start
@@ -25,7 +27,17 @@
 
 
 
-  
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+            <div class="container-fluid">
+                @yield('content')
+            </div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
 
    
 
