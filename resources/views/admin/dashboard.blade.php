@@ -3,6 +3,8 @@
  
 @selection('title','Dashboard')
 
+
+
 <!--**********************************
             Header start
         ***********************************-->
@@ -47,7 +49,7 @@
 							
                             <li class="nav-item dropdown header-profile">
                                 <a class="nav-link" href="javascript:;" role="button" data-toggle="dropdown">
-                                    <img src="{{ asset('assets/images/avatar/2.png')}}" width="20" alt=""/>
+                                    <img src="{{ asset('assets/images/avatar/5.png')}}" width="20" alt=""/>
 									<div class="header-info">
 										<span>Admin</strong></span>
 									</div>
@@ -217,7 +219,7 @@
 									<div class="items">
 										<div class="text-center">
 											<img src="images/doctors/5.jpg" alt="" >
-											<div class="dr-star"><i class="las la-star"></i> 4.2</div>
+											
 											<h5 class="fs-16 mb-1 font-w600"><a class="text-black" href="page-review.html">Alexandro Jr.</a></h5>
 											<span class="text-primary mb-2 d-block">Seller</span>
 											<p class="fs-12">ID 001</p>
@@ -231,7 +233,7 @@
 									<div class="items">
 										<div class="text-center">
 											<img src="images/doctors/1.jpg" alt="" >
-											<div class="dr-star"><i class="las la-star"></i> 4.2</div>
+											
 											<h5 class="fs-16 mb-1 font-w600"><a class="text-black" href="page-review.html">Chandana bandara</a></h5>
 											<span class="text-primary mb-2 d-block">Seller</span>
 											<p class="fs-12">ID 002</p>
@@ -245,7 +247,7 @@
 									<div class="items">
 										<div class="text-center">
 											<img src="images/doctors/2.jpg" alt="" >
-											<div class="dr-star"><i class="las la-star"></i> 4.2</div>
+											
 											<h5 class="fs-16 mb-1 font-w600"><a class="text-black" href="page-review.html">Hasitha Thushan</a></h5>
 											<span class="text-primary mb-2 d-block">Seller</span>
 											<p class="fs-12">Id 003</p>
@@ -354,5 +356,4 @@
             Content body end
         ***********************************-->
  
-
 

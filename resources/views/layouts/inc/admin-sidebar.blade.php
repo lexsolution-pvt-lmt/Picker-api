@@ -33,10 +33,7 @@
                     </li>
                 </ul>
             
-				<div class="plus-box">
-					<p class="fs-16 font-w500 mb-1">Check your job schedule</p>
-					<a class="text-white fs-26" href="javascript:;"><i class="las la-long-arrow-alt-right"></i></a>
-				</div>
+				<br><br><br><br><br><br><br><br><br><br>
 				<div class="copyright">
 					<p class="fs-14 font-w200"><strong class="font-w400">Picker Auction Website</strong> © 2023 All Rights Reserved</p>
 					<p>Made with <i class="fa fa-heart"></i> by LexSolution</p>

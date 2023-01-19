@@ -15,6 +15,11 @@
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 </head>
 <body>
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
 
 @include('layouts/inc/admin-navbar')
 
@@ -27,7 +32,7 @@
 @include('layouts/inc/admin-footer')
        
 
-
+</div>
     
 <!-- Required vendors -->
     <script src="{{ asset('assets/vendor/global/global.min.js') }}"></script>
@@ -36,9 +41,7 @@
     <script src="{{ asset('assets/js/deznav-init.js') }}"></script>
     
 
-    <script src="{{ asset('assets/vendor/owl-carousel/owl.carousel.js') }}"></script>
-    <script src="{{ asset('assets/vendor/chart.js/Chart.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/js/dashboard/dashboard-1.js') }}"></script>
+    
     
     <script>
         const formE1 = document.querySelector('.form');
