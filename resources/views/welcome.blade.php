@@ -59,9 +59,9 @@
 
   <main class="px-3">
     
-    <p class="lead">The most impressing concept of online auction system is you don’t need to anywhere offline. It’s the system where you can bid online without investing your time and bid for particular products.</p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
+    <p class="mt-auto text-black-50">The most impressing concept of online auction system is you don’t need to anywhere offline. It’s the system where you can bid online without investing your time and bid for particular products.</p>
+    <p class="mt-auto text-black-50">
+      <a href="{{ route ('register') }}" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Get Started!</a>
     </p>
   </main>
 
