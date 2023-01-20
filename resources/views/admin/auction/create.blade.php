@@ -82,95 +82,95 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-validation">
-                                    <form class="form-valide" action="#" method="post">
+                                    <form class="form-valide" action="http://127.0.0.1:8000/api/auctions" method="post">
                                         <div class="row">
                                             <div class="col-xl-6">
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-username">Title
+                                                    <label class="col-lg-4 col-form-label" name="title">Title
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="val-username" name="val-username" placeholder="Enter a username..">
+                                                        <input type="text" class="form-control" name="title" placeholder="Enter a Title">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-email">Description <span
+                                                    <label class="col-lg-4 col-form-label" name="description">Description <span
                                                             class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="val-email" name="val-email" placeholder="Your valid email..">
+                                                        <input type="text" class="form-control" name="description" placeholder="Your Description.">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-password">image
+                                                    <label class="col-lg-4 col-form-label" >image
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="img" name="val-password" placeholder="Choose a safe one..">
+                                                        <input type="text" class="form-control" name="image" placeholder="Choose a safe one..">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-currency">Starting Price
+                                                    <label class="col-lg-4 col-form-label" name="starting_price" for="val-currency">Starting Price
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="sprice" name="val-currency" placeholder="$21.60">
+                                                        <input type="text" class="form-control"  name="starting_price" placeholder="$21.60">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-currency">Reserve Price
+                                                    <label class="col-lg-4 col-form-label" name="reserve_price">Reserve Price
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="rprice" name="val-currency" placeholder="$21.60">
+                                                        <input type="text" class="form-control" name="reserve_price" placeholder="Enter a Title">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-currency">Buy Now Price
+                                                    <label class="col-lg-4 col-form-label" name="buy_now_price">Buy Now Price
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="binprice" name="val-currency" placeholder="$21.60">
+                                                        <input type="text" class="form-control" name="buy_now_price" placeholder="$21.60">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-currency">End Date
+                                                    <label class="col-lg-4 col-form-label" name="end_date">End Date
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="edate" name="val-currency" placeholder="01/01/2023">
+                                                        <input type="text" class="form-control" name="end_date" placeholder="01/01/2023">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-currency">End Time
+                                                    <label class="col-lg-4 col-form-label" name="end_time">End Time
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="etime" name="val-currency" placeholder="00.00">
+                                                        <input type="text" class="form-control" name="end_time" placeholder="00.00">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-currency">Status
+                                                    <label class="col-lg-4 col-form-label" name="status">Status
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="etime" name="val-currency" placeholder="Active/Inactive">
+                                                        <input type="text" class="form-control" name="status" placeholder="Active/Inactive">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-currency">User ID
+                                                    <label class="col-lg-4 col-form-label" name="user_id">User ID
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="uid" name="val-currency" placeholder="1">
+                                                        <input type="text" class="form-control" name="user_id" placeholder="1">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-currency">Category ID
+                                                    <label class="col-lg-4 col-form-label" name="category_id">Category ID
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="cid" name="val-currency" placeholder="1">
+                                                        <input type="text" class="form-control" name="category_id" placeholder="1">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">

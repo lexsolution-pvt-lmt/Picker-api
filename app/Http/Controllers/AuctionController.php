@@ -37,10 +37,7 @@ class AuctionController extends Controller
 
         //return view('admin.auction.create');
 
-        return response()->json([
-            'message' => 'Auction created successfully',
-            'auction' => $auction
-        ], 201);
+        return redirect('http://127.0.0.1:8000/admin/auctions/create');
     }
 
    
