@@ -106,7 +106,19 @@
                                                 <td>{{$au['starting_price']}}</td>
                                                 <td>{{$au['reserve_price']}}</td>
                                                 <td>{{$au['buy_now_price']}}</td>
-                                                <td>{{$au['status']}}</td>
+                                                <td>
+                                                    <?php
+                                                    if($au['status'] == 0)
+                                                    {
+                                                        echo "Not Active";
+                                                    }
+                                                    else
+                                                    {
+                                                        echo "Active";
+                                                    }
+                                                    ?>
+                                                        
+                                                </td>
                                                 <td>
 													<div class="dropdown">
 														<button type="button" class="btn btn-success light sharp" data-toggle="dropdown">
