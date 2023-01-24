@@ -77,6 +77,7 @@
                             <div class="dashboard_bar">
                                 Auction Managment
                             </div>
+                            
                         </div>
 
                         <ul class="navbar-nav header-right">
@@ -205,6 +206,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">All Categories Table</h4>
+                                <a href={{url('admin/categories/create')}}><button type="button" class="btn btn-primary" >Add New Category</button></a>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">

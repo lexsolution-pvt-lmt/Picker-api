@@ -54,7 +54,7 @@ Route::post('reset-password', [NewPasswordController::class, 'reset']);
 //Auction Routes
 Route::apiResource('/auctions', AuctionController::class);
 
-Route::get('/auctions/category/{category_name}', [AuctionController::class, 'getByCategory']);
+//Route::get('/auctions/category/{category_name}', [AuctionController::class, 'getByCategory']);
 
 //Bid Routes
 Route::apiResource('/bids', BidController::class);

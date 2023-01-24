@@ -35,6 +35,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/users/create', [App\Http\Controllers\Admin\UserController::class, 'create'])->name('Add User');
     Route::get('/users/profile', [App\Http\Controllers\Admin\UserController::class, 'show'])->name('User Profile');
     Route::get('/categories', [App\Http\Controllers\Admin\CategoriesController::class, 'index'])->name('Categories');
+    Route::get('/categories/create', [App\Http\Controllers\Admin\CategoriesController::class, 'create'])->name('Add Category');
 });
 
 

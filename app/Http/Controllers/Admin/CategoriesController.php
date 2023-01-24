@@ -14,4 +14,9 @@ class CategoriesController extends Controller
         return view('admin.categories.index', ['categories'=>$data]);
 
     }
+
+    public function create() 
+    {
+        return view('admin.categories.create');
+    }
 }
